@@ -12,7 +12,7 @@ spec:
         name: springboot
     spec:
       containers:
-      - image: dockerhandson/spring-boot-mongo
+      - image: 380987008477.dkr.ecr.eu-west-2.amazonaws.com/spring-boot-mongo:latest
         name: springboot
         ports:
         - name: springboot
