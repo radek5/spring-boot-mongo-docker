@@ -4,8 +4,6 @@ pipeline{
 
   tools {
     name: maven "Maven-3.6.3"
-  }
-  tools {
     name: docker "docker.io"
   }
   
