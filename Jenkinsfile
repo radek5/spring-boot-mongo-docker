@@ -4,7 +4,6 @@ pipeline{
 
   tools {
     name: maven "Maven-3.6.3"
-    name: "docker.io"
   }
   
     stages {
