@@ -3,11 +3,13 @@ pipeline{
   agent { label "kubepod" }
 
   tools {
-    name: maven "Maven-3.6.3",
+    name: maven "Maven-3.6.3"
+  }
+  tools {
     name: docker "docker.io"
   }
-
-  stages {
+  
+    stages {
 
   stage("Git Clone"){
     steps {
