@@ -1,7 +1,9 @@
-node{
+pipeline{
     
-  agent { label 'kubepod' }
-    
+  agent { label "kubepod" }
+  
+  stages {
+  
   stage("Git Clone"){
     git credentialsId: 'Jenkins-Git', url: 'https://github.com/radek5/spring-boot-mongo-docker.git'
    }
@@ -29,4 +31,5 @@ node{
       secretName: 'eu-west-2-ecr-registry'
       )
     }
+  }
 }
