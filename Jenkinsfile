@@ -1,5 +1,7 @@
 node{
     
+  agent { label 'kubepod' }
+    
   stage("Git Clone"){
     git credentialsId: 'Jenkins-Git', url: 'https://github.com/radek5/spring-boot-mongo-docker.git'
    }
