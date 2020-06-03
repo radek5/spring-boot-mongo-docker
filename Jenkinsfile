@@ -21,12 +21,10 @@ stage("Push Docker Image"){
     }
     
 stage("Deploy To K8s Cluster"){
-   kubernetesDeploy(
-     configs: 'springBootMongo.yml', 
-     kubeConfig: [path: ''], 
-     kubeconfigId: 'KubeConfig', 
-     secretName: 'eu-west-2-ecr-registry'
+    script {
+        kubernetesDeploy(configs: 'springBootMongo.yml', kubeConfig: [path: ''], kubeconfigId: 'KubeConfig', secretName: 'eu-west-2-ecr-registry'
        )
+    }
      }
   }
 
