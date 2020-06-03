@@ -5,11 +5,9 @@ stage("Git Clone"){
     } 
     
 stage("Maven Clean Build"){
-     steps {
        echo mavenHome = tool name: "Maven-3.6.3", type: "maven"
        echo mavenCMD = "${mavenHome}/bin/mvn"
        sh "${mavenCMD} clean package"
-      }
     }
   }
 
