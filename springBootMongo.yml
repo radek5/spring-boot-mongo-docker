@@ -17,8 +17,6 @@ spec:
         ports:
         - name: springboot
           containerPort: 8080      
-      imagePullSecrets:
-        - name: eu-west-2-ecr-registry  
 ---
 # Node Port Service
 apiVersion: apps/v1
