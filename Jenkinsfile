@@ -27,7 +27,6 @@ stage("Deploy To K8s Cluster"){
         secretName: 'eu-west-2-ecr-registry'
        )
      }
-    }
   }
 
 
