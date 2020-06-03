@@ -13,6 +13,12 @@ stage("Maven Clean Build"){
    stage("Build Docker Image"){
       sh "docker build -t 380987008477.dkr.ecr.eu-west-2.amazonaws.com/spring-boot-mongo ."
     }  
+    
+   stage("Push Docker Image"){
+      withDockerRegistry(credentialsId: 'ecr:eu-west-2:jenkins_aws', url: 'https://380987008477.dkr.ecr.eu-west-2.amazonaws.com') {
+        sh "docker push 380987008477.dkr.ecr.eu-west-2.amazonaws.com/spring-boot-mongo"
+      }
+    }
   }
 
 
