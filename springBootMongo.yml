@@ -18,7 +18,7 @@ spec:
         - name: springboot
           containerPort: 8080      
       imagePullSecrets:
-        - name: eu-west-2-ecr-registry
+        - name: default-token-xkqvb
 ---
 # Node Port Service
 apiVersion: v1
