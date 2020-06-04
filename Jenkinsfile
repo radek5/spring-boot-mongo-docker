@@ -33,13 +33,11 @@ stage("Push Docker Image"){
 }
     
 stage("Deploy To K8s Cluster"){
-    steps {
-      script {
-        kubernetesDeploy(configs: 'springBootMongo.yml', kubeconfigId: 'Kube-Config')
-       }
-     }
+    withKubeConfig(credentialsId: 'Kube-Config') {
+      sh "kubectl apply -f springBootMongo.yml"
+      }
+    }
   }
-}
 }
 
 
