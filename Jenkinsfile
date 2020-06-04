@@ -26,6 +26,5 @@ stage("Deploy To K8s Cluster"){
         }
     }
   }
-}
 
 
