@@ -21,7 +21,7 @@ stage("Push Docker Image"){
 }
     
 stage("Deploy To K8s Cluster"){
-      withKubeConfig(credentialsId: 'Kube-Config') {
+      withKubeConfig(credentialsId: 'k8s-kubeconfig') {
         sh "kubectl apply -f springBootMongo.yml"
         }
     }
